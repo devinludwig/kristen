@@ -1,0 +1,129 @@
+/* Custom CSS for the artist's website */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito Sans', sans-serif;
+  color: #555252;
+  background-color: #fff;
+  height: 100vh;
+}
+
+a:hover {
+  color: black
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.container {
+  margin: 20px;
+  height: 100vh;
+}
+
+.navbar-toggler-icon {
+  color: #555252;
+}
+
+.carousel-inner{
+  height:100%;
+}
+
+.carousel-item img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: contain;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.navbar-brand {
+  font-size: 24px;
+  color: #555252;
+}
+
+.navbar-nav .nav-item .nav-link {
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #555252;
+}
+
+.nav-link:hover {
+  color: black;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #555252;
+}
+
+@media (min-width: 992px) {
+  /* Navbar positioning for large screens */
+  .container-fluid {
+    display:flex;
+    height: 100vh;
+    padding-left: 220px;
+    align-items: center;
+    justify-content: center;
+    object-fit: contain;
+  }
+
+  .navbar {
+    height: 100vh;
+    width: 220px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    padding: 20px;
+    display: inline-flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .navbar-nav {
+    display: flex !important;
+    flex-direction: column !important;
+    }
+
+  .navbar-brand {
+    margin-bottom: 10px;
+  }
+
+  .navbar-nav .nav-item .nav-link {
+    color: #555252;
+    text-align: left;
+  }
+
+  a:hover {
+     color: black;
+  }
+
+  .navbar-toggler {
+    display: none;
+  }
+
+  .carousel-item img {
+    display: flex;
+    object-fit: contain;
+    max-width: 80vw;
+    max-height: 80vh;
+  }
+
+  .carousel-control-next,
+  .carousel-control-prev {
+    height: 100%;
+    width: 50%;
+  }
+
+  .carousel-control-prev {
+    cursor: w-resize;
+  }
+  .carousel-control-next {
+    cursor: e-resize;
+  }
+}
