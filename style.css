@@ -60,6 +60,38 @@ h1 {
   color: #555252;
 }
 
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image img {
+  max-height: 80vh;
+  max-width: 100%;
+}
+
+.filler-text {
+  flex: 1;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+
 @media (min-width: 992px) {
   /* Navbar positioning for large screens */
   .container-fluid {
