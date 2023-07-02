@@ -145,6 +145,7 @@ h1 {
     object-fit: contain;
     max-width: 80vw;
     max-height: 80vh;
+    animation: fadeIn 1s;
   }
 
   .carousel-control-next,
@@ -159,4 +160,9 @@ h1 {
   .carousel-control-next {
     cursor: e-resize;
   }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
