@@ -85,6 +85,35 @@ h1 {
   padding: 20px;
 }
 
+.contact {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.line {
+  margin-bottom: 10px;
+}
+
+.instagram-handle, .email-link {
+  display: inline-block;
+  margin-left: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.email-icon, .instagram-icon {
+  margin-right: 5px;
+  width: 20px;
+}
+
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
