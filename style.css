@@ -25,6 +25,7 @@ h1 {
 
 .navbar-toggler-icon {
   color: #555252;
+  width: 60px;
 }
 
 .carousel-inner{
