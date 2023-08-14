@@ -47,18 +47,16 @@ h1 {
 }
 
 .navbar-nav .nav-item .nav-link {
-  font-size: 18px;
-  margin-bottom: 10px;
   text-align: center;
-  color: #555252;
+  color: #8f8c8c;
 }
 
-.nav-link:hover {
+.navbar-nav .nav-item .nav-link:hover {
   color: black;
 }
 
 .navbar-light .navbar-nav .nav-link {
-  color: #555252;
+  color: #969494;
 }
 
 .container {
@@ -69,7 +67,6 @@ h1 {
 }
 
 .image {
-  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -82,6 +79,7 @@ h1 {
 
 .filler-text {
   flex: 1;
+  display: flex;
   padding: 20px;
 }
 
@@ -122,7 +120,7 @@ h1 {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   /* Navbar positioning for large screens */
   .container-fluid {
     display:flex;
@@ -131,6 +129,9 @@ h1 {
     align-items: center;
     justify-content: center;
     object-fit: contain;
+  }
+  .container {
+    flex-wrap: wrap;
   }
 
   .navbar {
@@ -147,6 +148,11 @@ h1 {
     align-items: flex-start;
   }
 
+  #navbarNav {
+    justify-content: start;
+    align-items: start;
+  }
+
   .navbar-nav {
     display: flex !important;
     flex-direction: column !important;
@@ -157,7 +163,7 @@ h1 {
   }
 
   .navbar-nav .nav-item .nav-link {
-    color: #555252;
+    color: #706c6c;
     text-align: left;
   }
 
