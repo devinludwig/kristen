@@ -125,23 +125,24 @@ h1 {
   .container-fluid {
     display:flex;
     height: 100vh;
-    padding-left: 220px;
+    padding-left: 320px;
     align-items: center;
     justify-content: center;
-    object-fit: contain;
+    box-sizing: border-box;
   }
+
   .container {
     flex-wrap: wrap;
   }
 
   .navbar {
     height: 100vh;
-    width: 220px;
+    width: 320px;
     position: fixed;
     top: 0;
     left: 0;
     background-color: #fff;
-    padding: 20px;
+    padding: 50px;
     display: inline-flex !important;
     flex-direction: column !important;
     justify-content: flex-start;
@@ -186,11 +187,12 @@ h1 {
   .carousel-control-next,
   .carousel-control-prev {
     height: 100%;
-    width: 50%;
+    width: calc(50% - 160px);
   }
 
   .carousel-control-prev {
     cursor: w-resize;
+    left: 320px;
   }
   .carousel-control-next {
     cursor: e-resize;
