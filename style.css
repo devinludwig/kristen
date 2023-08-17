@@ -9,6 +9,19 @@ body {
   height: 100vh;
 }
 
+.container {
+  margin: 20px;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  z-index: 2;
+}
+
 a:hover {
   color: black
 }
@@ -16,11 +29,6 @@ a:hover {
 h1 {
   font-size: 48px;
   margin-bottom: 20px;
-}
-
-.container {
-  margin: 20px;
-  height: 100vh;
 }
 
 .navbar-toggler-text {
@@ -46,30 +54,24 @@ h1 {
   color: #555252;
 }
 
-.navbar-nav .nav-item .nav-link {
+.nav-link {
   text-align: center;
   color: #8f8c8c;
 }
 
-.navbar-nav .nav-item .nav-link:hover {
+.nav-link:hover {
   color: black;
 }
 
-.navbar-light .navbar-nav .nav-link {
+.nav-link, a {
   color: #969494;
-}
-
-.container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
 }
 
 .image {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px;
 }
 
 .image img {
@@ -81,6 +83,7 @@ h1 {
   flex: 1;
   display: flex;
   padding: 20px;
+  align-content: center;
 }
 
 .contact {
@@ -112,17 +115,50 @@ h1 {
   width: 20px;
 }
 
+.controls {
+  margin-left: 16px;
+}
+
+.controls a {
+    color: #222 !important;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+  }
+
+.meta {
+  font-size: 12px;
+  margin-left: 16px;
+}
+
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
   }
+
+  .container-fluid {
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .carousel-control-next,
+  .carousel-control-prev {
+    width: 50%;
+  }
+
+  .controls, .meta {
+    display: none;
+  }
 }
 
 @media (min-width: 768px) {
   /* Navbar positioning for large screens */
-  .container-fluid {
+  .container-fluid, .contact {
     display:flex;
     height: 100vh;
     padding-left: 320px;
@@ -143,6 +179,7 @@ h1 {
     left: 0;
     background-color: #fff;
     padding: 50px;
+    padding-right: 10px;
     display: inline-flex !important;
     flex-direction: column !important;
     justify-content: flex-start;
