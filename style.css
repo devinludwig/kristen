@@ -152,7 +152,7 @@ h1 {
   }
 
   .controls, .meta {
-    display: none;
+    display: none !important;
   }
 }
 
