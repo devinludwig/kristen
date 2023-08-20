@@ -234,6 +234,10 @@ h1 {
   .carousel-control-next {
     cursor: e-resize;
   }
+
+  #tapNotice {
+    display: none !important;
+  }
 }
 
 @keyframes fadeIn {
