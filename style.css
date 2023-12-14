@@ -1,5 +1,3 @@
-/* Custom CSS for the artist's website */
-
 body {
   margin: 0;
   padding: 0;
@@ -44,9 +42,8 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  object-fit: contain;
-  max-width: 90%;
-  max-height: 90%;
+  max-height: 90vh;
+  max-width: 100%;
 }
 
 .navbar-brand {
@@ -67,16 +64,11 @@ h1 {
   color: #969494;
 }
 
-.image {
+img {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
-}
-
-.image img {
-  max-height: 80vh;
-  max-width: 100%;
+  max-height: 90vh;
 }
 
 .filler-text {
@@ -113,6 +105,7 @@ h1 {
 .email-icon, .instagram-icon {
   margin-right: 5px;
   width: 20px;
+  display: inline;
 }
 
 .controls {
@@ -141,9 +134,11 @@ h1 {
   }
 
   .container-fluid {
+    height: calc(100vh - 62px);
     display:flex;
     align-items: center;
     flex-direction: column;
+    justify-content: center;
   }
 
   .carousel-control-next,
@@ -154,6 +149,10 @@ h1 {
   .controls, .meta {
     display: none !important;
   }
+}
+
+#about {
+  height: auto;
 }
 
 @media (min-width: 768px) {
@@ -216,8 +215,8 @@ h1 {
   .carousel-item img {
     display: flex;
     object-fit: contain;
-    max-width: 80vw;
-    max-height: 80vh;
+    max-width: 100%;
+    max-height: 90vh;
     animation: fadeIn 1s;
   }
 
