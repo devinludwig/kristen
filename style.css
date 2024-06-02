@@ -7,6 +7,16 @@ body {
   height: 100vh;
 }
 
+pre {
+  font-family: 'Nunito Sans', sans-serif;
+  color: #555252;
+  white-space: pre-wrap;       /* Since CSS 2.1 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
 .container {
   margin: 20px;
   height: 100vh;
@@ -81,6 +91,7 @@ img {
   display: flex;
   padding: 20px;
   align-content: center;
+  flex-direction: column;
 }
 
 .contact {
@@ -126,6 +137,14 @@ img {
     letter-spacing: .04em;
   }
 
+
+#about {
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .meta {
   font-size: 12px;
   margin-left: 16px;
@@ -154,10 +173,6 @@ img {
   .controls, .meta {
     display: none !important;
   }
-}
-
-#about {
-  height: auto;
 }
 
 @media (min-width: 768px) {
