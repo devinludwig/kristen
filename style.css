@@ -109,7 +109,7 @@ img {
   margin-bottom: 10px;
 }
 
-.instagram-handle, .email-link {
+.instagram-handle, .email-link, .link-dark {
   display: inline-block;
   margin-left: 5px;
   font-weight: bold;
