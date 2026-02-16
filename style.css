@@ -129,6 +129,7 @@ img {
   margin-left: 16px;
 }
 
+
 .controls a {
     color: #222 !important;
     font-weight: 400;
@@ -149,6 +150,11 @@ img {
 .meta {
   font-size: 12px;
   margin-left: 16px;
+}
+
+.meta p {
+  margin: 0;
+  line-height: 1.2;
 }
 
 @media (max-width: 768px) {
@@ -231,6 +237,15 @@ img {
 
   .navbar-toggler {
     display: none;
+  }
+
+  /* Increase space between meta text and Prev/Next controls on desktop */
+  .controls {
+    margin-left: 48px;
+  }
+  /* Add vertical spacing so controls sit lower than meta on desktop */
+  .controls {
+    margin-top: 16px;
   }
 
   .carousel-item img {
