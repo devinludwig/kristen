@@ -157,6 +157,19 @@ img {
   line-height: 1.2;
 }
 
+
+/* Mobile-only UI should be hidden by default (desktop) */
+.mobile-meta,
+.tapNotice-mobile {
+  display: none;
+}
+
+/* Prevent the title + date line from wrapping; allow it to overflow horizontally */
+#meta-line1 {
+  white-space: nowrap;
+  overflow: visible;
+}
+
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
@@ -169,7 +182,7 @@ img {
     display:flex;
     align-items: center;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
   }
 
   .carousel-control-next,
@@ -177,12 +190,81 @@ img {
     width: 50%;
   }
 
-  .controls, .meta {
+  /* Hide desktop meta and prev/next controls on mobile; show mobile meta below images */
+  .controls {
     display: none !important;
+  }
+  /* hide desktop nav meta so mobile copy is used */
+  nav .meta {
+    display: none !important;
+  }
+
+  /* show mobile meta (updated by JS) */
+  .mobile-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 12px;
+  }
+
+  /* center the in-carousel tap notice below the image on mobile */
+  .carousel-item {
+    position: relative;
+  }
+
+  #tapNotice {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 16px;
+    z-index: 6;
+    color: #fff;
+    font-weight: 900;
+    font-size: 1.6rem;
+    letter-spacing: 0.02em;
+    /* dark translucent backdrop for contrast */
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    text-shadow: 0 8px 24px rgba(0,0,0,0.95), 0 2px 12px rgba(0,0,0,0.85), 0 0 36px rgba(255,255,255,0.06);
+    padding: 10px 16px;
+    border-radius: 8px;
+    opacity: 1;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    pointer-events: none;
+  }
+
+  /* Ensure the inner .navbar-brand text is white/very bold with a stronger shadow */
+  #tapNotice .navbar-brand {
+    color: #ffffff !important;
+    font-weight: 1000 !important;
+    font-size: 1.6rem !important;
+    line-height: 1 !important;
+    text-shadow: 0 8px 24px rgba(0,0,0,0.95), 0 2px 12px rgba(0,0,0,0.85), 0 0 36px rgba(255,255,255,0.06) !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Hidden state used to fade the notice away */
+  #tapNotice.tap-hidden {
+    opacity: 0 !important;
+    transform: translateX(-50%) translateY(8px);
   }
 }
 
 @media (min-width: 768px) {
+    /* Ensure the in-carousel tap notice sits centered below the image on mobile */
+    #tapNotice {
+      display: flex !important;
+      justify-content: center;
+      width: 100%;
+      margin-top: 8px;
+      position: relative;
+    }
   /* Navbar positioning for large screens */
   .container-fluid, .contact {
     display:flex;

@@ -156,6 +156,12 @@
         </div>
       </div>
     </div>
+    <!-- Mobile-only meta (centered below images) -->
+    <div class="mobile-meta" aria-hidden="false">
+      <p id="meta-line1-mobile"></p>
+      <p id="meta-line2-mobile"></p>
+      <p id="meta-line3-mobile"></p>
+    </div>
   </div>
 
   <!-- Bootstrap JS -->
@@ -193,10 +199,17 @@
         var el1 = document.getElementById('meta-line1');
         var el2 = document.getElementById('meta-line2');
         var el3 = document.getElementById('meta-line3');
-
         if (line1) { el1.textContent = line1; el1.style.display = ''; } else { el1.textContent = ''; el1.style.display = 'none'; }
         if (line2) { el2.textContent = line2; el2.style.display = ''; } else { el2.textContent = ''; el2.style.display = 'none'; }
         if (line3) { el3.textContent = line3; el3.style.display = ''; } else { el3.textContent = ''; el3.style.display = 'none'; }
+
+        // Update mobile meta if present
+        var m1 = document.getElementById('meta-line1-mobile');
+        var m2 = document.getElementById('meta-line2-mobile');
+        var m3 = document.getElementById('meta-line3-mobile');
+        if (m1) { if (line1) { m1.textContent = line1; m1.style.display = ''; } else { m1.textContent = ''; m1.style.display = 'none'; } }
+        if (m2) { if (line2) { m2.textContent = line2; m2.style.display = ''; } else { m2.textContent = ''; m2.style.display = 'none'; } }
+        if (m3) { if (line3) { m3.textContent = line3; m3.style.display = ''; } else { m3.textContent = ''; m3.style.display = 'none'; } }
       }
 
       // Initialize on DOM ready and on carousel change
@@ -220,6 +233,17 @@
             e.preventDefault();
           }
         });
+        // On mobile, show the in-carousel tap notice briefly and fade it away
+        if (window.matchMedia && window.matchMedia('(max-width: 768px)').matches) {
+          var $tap = $('#tapNotice');
+          if ($tap.length) {
+            // ensure it's visible then hide after delay by toggling a class (CSS handles transition)
+            $tap.removeClass('tap-hidden');
+            setTimeout(function () {
+              $tap.addClass('tap-hidden');
+            }, 1000);
+          }
+        }
       });
     })();
   </script>
